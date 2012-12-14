@@ -10,6 +10,10 @@ use Data::Dumper;
 
 our $VERSION = "0.0.1";
 
+BEGIN {
+	$ENV{PERL_NET_HTTPS_SSL_SOCKET_CLASS} = "Net::SSL";
+}
+
 sub new {
     my ($class,$args) = @_;
     
